@@ -141,6 +141,20 @@ a.select{
     width: 250px;
 }
 
+.options_menu a.select{
+    color: white;
+}
+
+.select::before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
 /*Media para que sea responsivo*/
 @media screen and (max-width: 760px) {
     .body_move{
