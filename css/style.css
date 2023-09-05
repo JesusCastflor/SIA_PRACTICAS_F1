@@ -132,6 +132,17 @@ a.select{
     left: -30px;
 }
 
+.title{
+    padding-bottom: 10px;
+}
+
+.sub_title{
+    padding-bottom: 20px ;
+    text-align: center; 
+    margin-top: 30px; 
+    line-height: 1; 
+}
+
 /*Clases de Javascript*/
 .body_move{
     margin-left: 250px;
@@ -148,11 +159,54 @@ a.select{
 .select::before{
     content: '';
     width: 3px;
-    height: 80%;
+    height: 100vh;
     background: white;
     position: absolute;
     top: 10%;
     left: -30px;
+}
+
+/*Estilos de la pagina items*/
+form{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.cuadrado{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    background: rgb(206, 204, 204);
+    border-radius: 20px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin-bottom: 3px;
+    padding-left: 10px;
+}
+
+.field label{
+    padding-left: 7px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.field input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-radius: 4px;
+    width: 100%;
 }
 
 /*Media para que sea responsivo*/
@@ -166,3 +220,10 @@ a.select{
         left: -80px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+}
+

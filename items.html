@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Font Awesome para los iconos-->
-    <link rel="stylesheet" href="/css/style.css">   <!--Estilos css-->
-    <title>Facturacion</title>
+    <link rel="stylesheet" href="/css/style.css"> <!--Estilos css-->
+    <title>Items</title>
 </head>
 
 <body id="body">
-    <header>    <!--Almacena el boton del menu-->
+    <header> <!--Almacena el boton del menu-->
         <div class="icon_menu" id="btn_open"> <!--Contenedor el icono del menu-->
             <i class="fas fa-bars"></i> <!--Icono del menu-->
         </div>
@@ -27,19 +27,19 @@
         <div class="options_menu"> <!--Las opciones del menu-->
             <a href="index.html" id="Usuario">
                 <div class="option">
-                    <i class="fa-solid fa-user" title="Usuario"></i>  <!--Inicio-->
+                    <i class="fa-solid fa-user" title="Usuario"></i> <!--Inicio-->
                     <h4>Usuario</h4>
                 </div>
             </a>
             <a href="index.html" id="Inicio">
                 <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>  <!--Inicio-->
+                    <i class="fas fa-home" title="Inicio"></i> <!--Inicio-->
                     <h4>Inicio</h4>
                 </div>
             </a>
             <a href="facturacion.html" id="Facturacion">
                 <div class="option">
-                    <i class="fa-regular fa-file" title="Facturacion"></i>  <!--Facturacion-->
+                    <i class="fa-regular fa-file" title="Facturacion"></i> <!--Facturacion-->
                     <h4>Facturacion</h4>
                 </div>
             </a>
@@ -49,34 +49,48 @@
                     <h4>Clientes</h4>
                 </div>
             </a>
-            <a href="items.html">
+            <a href="#">
                 <div class="option">
-                    <i class="fa-regular fa-clipboard" title="Items"></i>   <!--Items-->
+                    <i class="fa-regular fa-clipboard" title="Items"></i> <!--Items-->
                     <h4>Items</h4>
                 </div>
             </a>
             <a href="#">
                 <div class="option">
-                    <i class="fa-solid fa-calendar-days" title="Historial"></i>   <!--Items-->
+                    <i class="fa-solid fa-calendar-days" title="Historial"></i> <!--Historial-->
                     <h4>Historial de Facturacion</h4>
                 </div>
             </a>
         </div>
 
     </div>
-
+    <!--Cuerpo de la pagina-->
     <main>
-        <h1> Facturacion </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem expedita nobis non totam ullam natus 
-            laudantium cupiditate suscipit ut corrupti laboriosam explicabo nulla illum, eveniet inventore veniam similique nostrum.
-        </p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa facilis saepe ipsam fugit vel inventore in explicabo at recusandae commodi! 
-            Repellendus reiciendis non sed, ducimus, cum esse cumque corporis atque beatae quis nostrum explicabo earum molestias vitae ullam quasi tenetur. Nihil illo maxime minima error eum laudantium ea officia impedit eaque, repellat eveniet sit dicta voluptas magnam in, nemo doloremque obcaecati dolore? Tempore a nihil consectetur dignissimos ea facilis magni eos minima possimus nostrum. 
-            Quos, officiis maiores. Impedit, repudiandae esse.
-        </p>
+        <h1 class="title">Items</h1> <!--Titulo de la Pagina-->
+        <section class="cuadrado">
+            <h2 class="sub_title">Crear un nuevo item </h2>
+            <form>
+                <div class="field"> <!--Nombre-->
+                    <label>Nombre</label>
+                    <input type="text" name="nombre_item" required placeholder="Nombre">
+                </div>
+                <div class="field"> <!--Precio Unitario-->
+                    <label>Precio Unitario</label>
+                    <input type="double" name="precio_item" required placeholder="Precio Unitario">
+                </div>
+                <div class="field"> <!--Unidad-->
+                    <label>Descripcion</label>
+                    <input type="text" name="descripcion_item" required placeholder="Unidad">
+                </div>
+                <div class="field"> <!--Stock-->
+                    <label>Stock</label>
+                    <input type="integer" name="stock_item" required placeholder="Stock">
+                </div>
+            </form>
+        </section>
     </main>
 
     <script src="javascript/script.js"></script>
 </body>
-
 </html>
+
