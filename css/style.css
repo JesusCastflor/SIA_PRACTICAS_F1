@@ -198,7 +198,7 @@ form{
 .field label{
     padding-left: 7px;
     margin-bottom: 5px;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .field input{
@@ -207,7 +207,27 @@ form{
     width: 70%;
     border-radius: 4px;
     width: 100%;
+    font-size: 0.9em;
 }
+
+.cuadrado button{
+    margin-bottom: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1%;
+    text-align: center; 
+    line-height: 1;
+    background-color: #878787;
+    border-radius: 20px;
+    border-color: rgb(16, 16, 16);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#cuadradov2{
+    margin-top: 30px;
+}
+
 
 /*Media para que sea responsivo*/
 @media screen and (max-width: 760px) {
@@ -221,9 +241,6 @@ form{
     }
 }
 
-@media screen and (max-width: 600px) {
-    .form-container {
-        grid-template-columns: 1fr;
-    }
-}
+
+
 

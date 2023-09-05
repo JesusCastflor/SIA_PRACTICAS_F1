@@ -67,6 +67,7 @@
     <!--Cuerpo de la pagina-->
     <main>
         <h1 class="title">Items</h1> <!--Titulo de la Pagina-->
+        <!--Seccion de crear un nuevo item-->
         <section class="cuadrado">
             <h2 class="sub_title">Crear un nuevo item </h2>
             <form>
@@ -85,6 +86,17 @@
                 <div class="field"> <!--Stock-->
                     <label>Stock</label>
                     <input type="integer" name="stock_item" required placeholder="Stock">
+                </div>
+            </form>
+            <button>Ingresar</button>
+        </section>
+        <!--Seccion de las tablas de items-->
+        <section class="cuadrado" id="cuadradov2">
+            <h2 class="sub_title"> Historial de Items </h2>
+            <form>
+                <div class="field"> <!--Nombre-->
+                    <label>Nombre</label>
+                    <input type="text" name="nombre_item" required placeholder="Nombre">
                 </div>
             </form>
         </section>
