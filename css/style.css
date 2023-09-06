@@ -166,7 +166,7 @@ a.select{
     left: -30px;
 }
 
-/*Estilos de la pagina items*/
+/*Estilos de los forms*/
 form{
     display: flex;
     flex-wrap: wrap;
@@ -228,6 +228,13 @@ form{
     margin-top: 30px;
 }
 
+/*Quita el incrementador y decretador de los number*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
 
 /*Media para que sea responsivo*/
 @media screen and (max-width: 760px) {

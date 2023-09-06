@@ -19,7 +19,12 @@
             <input placeholder="password" type="password" id="password">
         </label>
         <a href="#" class="link">Forgot your password</a>
-        <button id="button">Login</button>
+        <button id="button" onclick="redireccionar()">Login</button>
+        <script>
+        function redireccionar() {
+            window.location.href = 'index.html';
+        }
+        </script>
     </form>
     <script src="main.js"></script>
 </body>

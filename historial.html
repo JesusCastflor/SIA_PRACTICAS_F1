@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Font Awesome para los iconos-->
-    <link rel="stylesheet" href="/css/style.css">   <!--Estilos css-->
-    <title>Sistema de Facturacion</title>
+    <link rel="stylesheet" href="/css/style.css"> <!--Estilos css-->
+    <title>Historial</title>
 </head>
 
 <body id="body">
-    <header>    <!--Almacena el boton del menu-->
+    <header> <!--Almacena el boton del menu-->
         <div class="icon_menu" id="btn_open"> <!--Contenedor el icono del menu-->
             <i class="fas fa-bars"></i> <!--Icono del menu-->
         </div>
@@ -70,14 +70,22 @@
         </div>
 
     </div>
-
+    <!--Cuerpo de la pagina-->
     <main>
-        <h1> Inicio </h1>
-        <p>Bienvenido al sistema de Facturacion</p>
-
+        <h1 class="title">Historial</h1> <!--Titulo de la Pagina-->
+        <!--Seccion de las tablas de items-->
+        <section class="cuadrado" id="cuadradov2">
+            <h2 class="sub_title"> Historial de Facturacion </h2>
+            <form>
+                <div class="field"> <!--Nombre-->
+                    <label>Cliente</label>
+                    <input type="text" name="nombre_historial" required placeholder="Nombre">
+                </div>
+            </form>
+        </section>
     </main>
 
     <script src="javascript/script.js"></script>
 </body>
-
 </html>
+

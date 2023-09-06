@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Font Awesome para los iconos-->
-    <link rel="stylesheet" href="/css/style.css">   <!--Estilos css-->
-    <title>Sistema de Facturacion</title>
+    <link rel="stylesheet" href="/css/style.css"> <!--Estilos css-->
+    <title>Clientes</title>
 </head>
 
 <body id="body">
-    <header>    <!--Almacena el boton del menu-->
+    <header> <!--Almacena el boton del menu-->
         <div class="icon_menu" id="btn_open"> <!--Contenedor el icono del menu-->
             <i class="fas fa-bars"></i> <!--Icono del menu-->
         </div>
@@ -70,14 +70,57 @@
         </div>
 
     </div>
-
+    <!--Cuerpo de la pagina-->
     <main>
-        <h1> Inicio </h1>
-        <p>Bienvenido al sistema de Facturacion</p>
-
+        <h1 class="title">Clientes</h1> <!--Titulo de la Pagina-->
+        <!--Seccion de crear un nuevo item-->
+        <section class="cuadrado">
+            <h2 class="sub_title">Crear un nuevo cliente </h2>
+            <form>
+                <div class="field"> <!--Nombre-->
+                    <label>Nombres</label>
+                    <input type="text" name="nombres_cliente" required placeholder="Nombres">
+                </div>
+                <div class="field"> <!--Precio Unitario-->
+                    <label>Apellidos</label>
+                    <input type="text" name="apellidos_cliente" required placeholder="Apellidos">
+                </div>
+                <div class="field"> <!--Unidad-->
+                    <label>Telefono</label>
+                    <input type="number" name="telefono_cliente" required placeholder="Telefono">
+                </div>
+                <div class="field"> <!--Stock-->
+                    <label>Email</label>
+                    <input type="email" name="email_cliente" required placeholder="Email">
+                </div>
+                <div class="field"> <!--Stock-->
+                    <label>DNI</label>
+                    <input type="number" name="dni_cliente" required placeholder="DNI">
+                </div>
+                <div class="field"> <!--Stock-->
+                    <label>RUC</label>
+                    <input type="number" name="ruc_cliente" required placeholder="RUC">
+                </div>
+                <div class="field"> <!--Stock-->
+                    <label>Razon Social</label>
+                    <input type="text" name="razon_cliente" required placeholder="Razon Social">
+                </div>
+            </form>
+            <button>Ingresar</button>
+        </section>
+        <!--Seccion de las tablas de items-->
+        <section class="cuadrado" id="cuadradov2">
+            <h2 class="sub_title"> Historial de Clientes </h2>
+            <form>
+                <div class="field"> <!--Stock-->
+                    <label>RUC</label>
+                    <input type="number" name="ruc_cliente" required placeholder="RUC">
+                </div>
+            </form>
+        </section>
     </main>
 
     <script src="javascript/script.js"></script>
 </body>
-
 </html>
+

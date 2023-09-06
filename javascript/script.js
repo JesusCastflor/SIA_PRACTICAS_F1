@@ -23,6 +23,7 @@ var currentItem = document.getElementById(currentPage.split(".")[0]);
     }
     );
 
+
 //Funcion para ocultar el menu si el ancho es menor a 760px
     if(window.innerWidth < 760){
         body.classList.add("body_move");
@@ -45,3 +46,4 @@ window.addEventListener("resize", function(){
         side_menu.classList.add("menu_side_move");
     }
 });
+
