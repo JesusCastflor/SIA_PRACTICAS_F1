@@ -1,0 +1,254 @@
+*{ /*Css del todo la pagina*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;  /*Desactiva el subrrayado de los link*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{   /*Css del cuerpo*/
+    margin-left: 80px;
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+header{ /*Css de la cabezera*/
+    width: 100%;    
+    height: 80px;   
+    background-color: white;
+    display: flex;  /*Lo posiciona en el centro*/
+    align-items: center;    /*Pone los elementos en el centro*/
+    position: fixed;    /*Siempre se mostrara el elemento*/
+    top: 0;
+    z-index: 200;   /*Para que siempre se mantega encima de los demas elementos*/
+}
+
+
+main{
+    padding: 20px;
+}
+
+.icon_menu{ /*Css de la clase icon_menu*/
+    width: 50px;    /*Ancho*/
+    height: 100%;   /*Largo*/
+    display: flex;
+    justify-content: center;    /*Posicion del justificado del contenedor*/
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon_menu i{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute; /*Libre movimiento del boton*/
+}
+
+.menu_side{
+    width: 80px;
+    height: 100%;
+    background-color: rgb(8, 166, 178);
+    position: fixed;
+    top: 0; /*Arriba pegado*/
+    left: 0;    /*Iquierda pegado*/
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid rgb(8, 166, 178);
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll en navegadores*/
+.menu_side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll en navegadores*/
+.menu_side{
+    -ms-overflow-style: nome;
+    scrollbar-width: nome;
+}
+
+
+.name_page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.name_page i{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options_menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.options_menu a{
+    color: rgba(255, 255, 255, 0.612);
+    cursor: default;
+    display: block; /*Convertimos el <a> en bloque*/
+    position: relative;
+    transition: color 300ms;
+}
+
+.options_menu a:hover{
+    color: white;
+}
+
+.options_menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options_menu .option i{
+    margin-right: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.options_menu .option h4{
+    font-weight: 200;
+    cursor: pointer;
+}
+
+a.select{
+    color: white;
+}
+
+.select:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+.title{
+    padding-bottom: 10px;
+}
+
+.sub_title{
+    padding-bottom: 20px ;
+    text-align: center; 
+    margin-top: 30px; 
+    line-height: 1; 
+}
+
+/*Clases de Javascript*/
+.body_move{
+    margin-left: 250px;
+}
+
+.menu_side_move{
+    width: 250px;
+}
+
+.options_menu a.select{
+    color: white;
+}
+
+.select::before{
+    content: '';
+    width: 3px;
+    height: 100vh;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/*Estilos de los forms*/
+form{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.cuadrado{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    background: rgb(206, 204, 204);
+    border-radius: 20px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin-bottom: 3px;
+    padding-left: 10px;
+}
+
+.field label{
+    padding-left: 7px;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.field input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.cuadrado button{
+    margin-bottom: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1%;
+    text-align: center; 
+    line-height: 1;
+    background-color: #878787;
+    border-radius: 20px;
+    border-color: rgb(16, 16, 16);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#cuadradov2{
+    margin-top: 30px;
+}
+
+/*Quita el incrementador y decretador de los number*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/*Media para que sea responsivo*/
+@media screen and (max-width: 760px) {
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu_side_move{
+        width: 80px;
+        left: -80px;
+    }
+}
+
+
+
+
