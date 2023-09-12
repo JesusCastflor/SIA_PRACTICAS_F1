@@ -1,3 +1,68 @@
+/*   pagina de facturacion  */ 
+
+/* Estilos para el contenedor principal del formulario */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1200px; /* Ancho máximo del formulario */
+}
+
+/* Estilos para los campos individuales */
+.field {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    background: white;
+}
+
+.field label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los elementos de radio */
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilos adicionales para resaltar el elemento seleccionado */
+.radio-option input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+/* Estilos para el botón */
+.cuadrado button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    
+    background-color: #878787;
+    border-radius: 20px;
+    border-color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Media Query para hacer que los campos se apilen verticalmente en dispositivos móviles */
+@media screen and (max-width: 760px) {
+    .field {
+        flex: 100%;
+    }
+}
+
 *{ /*Css del todo la pagina*/
     margin: 0;
     padding: 0;
@@ -211,6 +276,22 @@ form{
     font-size: 0.9em;
 }
 
+
+/* Estilos para los elementos de radio */
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 15px;
+}
+/* Estilos adicionales para resaltar el elemento seleccionado */
+.radio-option input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
 .cuadrado button{
     margin-bottom: 2%;
     margin-left: 35%;
@@ -224,6 +305,8 @@ form{
     font-size: 16px;
     font-weight: 500;
 }
+
+
 
 #cuadradov2{
     margin-top: 30px;
@@ -248,7 +331,6 @@ input[type="number"]::-webkit-outer-spin-button {
         left: -80px;
     }
 }
-
 
 
 

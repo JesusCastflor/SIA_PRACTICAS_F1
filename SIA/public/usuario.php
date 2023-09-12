@@ -1,6 +1,10 @@
 <?php
 include('vista/superior.php');
 ?>
+<link rel="stylesheet" href="css/table.css">
+<link rel="stylesheet" href="css/style.css">
+
+
 <?php
 $query = "SELECT * FROM mae_usuario where ValueRegistro='1'";
 $result = filterRecord($query);
@@ -14,35 +18,25 @@ function filterRecord($query)
 ?>
     <!--Cuerpo de la pagina-->
     <main>
-<div class="container">
-    <Center>
-        <h1>Usuarios</h1>
-    </Center>
-    <div class="container">
+    <h1 class="title">Usuarios</h1>
+    <section class="cuadrado">
+        <h2 class="sub_title"> Lista de Usuarios</h2>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <a class="btn btn-success" type="button"  href="registration_usuario.php"  >Nuevo</a>
-<br>
-<br>
-            </div>
-            </div>
-    </div>
-    <br>
+            
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-responsive">
                     <?php
                     echo "<table id='example' class='table table-striped table-bordered table-condensed' style='width:100%'>
-<thead class='text-center'>
-<tr>
-<th> Numero </th>
-<th>Nombres y Apellidos</th>
-<th>Celular</th>
-<th>Email</th>
-<th>Acciones</th>
-</tr></thead>";
+                    <thead class='text-center'>
+                    <tr>
+                    <th> Numero </th>
+                    <th>Nombres y Apellidos</th>
+                    <th>Celular</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                    </tr></thead>";
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr>";
                         echo "<td>" . $row['ID_Vendedor'] . "</td>";
@@ -61,10 +55,15 @@ function filterRecord($query)
                     ?>
                 </div>
             </div>
+            
         </div>
+        <button>
+                <a class="btn btn-success" type="button"  href="registration_usuario.php">Nuevo</a>
+        </button>
     </div>
-</div>
+    
 
+    </section>
     </main>
 <?php
 include('vista/inferior.php');

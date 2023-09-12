@@ -1,18 +1,70 @@
 <?php
 include('vista/superior.php');
+
 ?>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<body id="body">
     <main>
-        <h1> Facturacion </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem expedita nobis non totam ullam natus 
-            laudantium cupiditate suscipit ut corrupti laboriosam explicabo nulla illum, eveniet inventore veniam similique nostrum.
-        </p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa facilis saepe ipsam fugit vel inventore in explicabo at recusandae commodi! 
-            Repellendus reiciendis non sed, ducimus, cum esse cumque corporis atque beatae quis nostrum explicabo earum molestias vitae ullam quasi tenetur. Nihil illo maxime minima error eum laudantium ea officia impedit eaque, repellat eveniet sit dicta voluptas magnam in, nemo doloremque obcaecati dolore? Tempore a nihil consectetur dignissimos ea facilis magni eos minima possimus nostrum. 
-            Quos, officiis maiores. Impedit, repudiandae esse.
-        </p>
+        <h1 class="title"> Facturación </h1>
+        <form>
+        
+            <section class="cuadrado">
+                <div class="field">
+                    <label>Fecha</label>
+                    <input type="date"  name="Fecha" id="fecha" placeholder="" readonly> 
+                    <script>
+                        // Obtener la fecha actual en formato YYYY-MM-DD
+                        var fechaActual = new Date().toISOString().slice(0, 10);
+                        // Establece la fecha actual como valor predeterminado del campo de entrada
+                        document.getElementById("fecha").value = fechaActual;
+                    </script>
+                </div>
+                
+                <div class="field">
+                    <label>Ruc</label>
+                    <input type="number"  name="Ruc" id="ruc" placeholder="Numero de 11 Digitos" required>
+                </div>
+                
+                <div class="field">
+                    <label>Cliente</label>
+                    <input type="text"  name="cliente" id="cliente" readonly>
+                </div>
+                
+                <div class="field">
+                    <label>N° Comprobante</label>
+                    <input type="text"  name="Ruc" id="ruc" placeholder="se hara de forma automatica" readonly>
+                </div>
+                
+                <div class="field">
+                    <label >Metodo de Pago</label>
+                    <div class="radio-option">
+                        <input type="radio" name="metodoPago" value="soles" id="radio_soles">
+                        <label for="radio_soles">Soles</label>
+                        <input type="radio" name="metodoPago" value="dolares" id="radio_dolares">
+                        <label for="radio_dolares">Dólares</label>
+                    </div>
+                    
+                </div>
+                
+                <div class="field">
+                    <label>Usuario</label>
+                    <input type="text"  name="user" id="user" value="<?php echo htmlspecialchars($usuario_obtener); ?>"  readonly>
+                </div>
+                
+                <div class="field">
+                    <label>Total de Cuenta</label>
+                    <input type="number"  name="total_factura" id="total_factura" placeholder="" required>
+                </div>
+                
+                <button> Emitir Factura </button>
+            </section>
+        </form>
+        
+        
     </main>
-
+</body>
     <?php
 include('vista/inferior.php');
 ?>
